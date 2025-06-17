@@ -1,6 +1,6 @@
 
 
-class Stack<T>{
+export default class Stack<T>{
     private list: T[];
 
     constructor(...args:T[]){
@@ -30,21 +30,4 @@ class Stack<T>{
     size(): number{
         return this.list.length;
     }
-
 }
-
-const myNewStack :Stack<number> = new Stack(3,5,6,7,8)
-
-console.log(myNewStack)
-
-console.log(myNewStack.isEmpty())
-
-console.log(myNewStack.push(4343))
-
-console.log(myNewStack)
-
-console.log(myNewStack.pop())
-
-console.log(myNewStack.pop())
-
-console.log(myNewStack.peek())
