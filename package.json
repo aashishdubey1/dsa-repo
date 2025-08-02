@@ -2,8 +2,9 @@
   "name": "dsa-repo",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "npx tsx src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +20,7 @@
   "homepage": "https://github.com/aashishdubey1/dsa-repo#readme",
   "description": "",
   "devDependencies": {
-    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   }
