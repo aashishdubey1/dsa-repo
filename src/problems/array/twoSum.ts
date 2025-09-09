@@ -7,10 +7,26 @@
 
 // You can return the answer in any order
 
-export function twoSum(nums: number[], target: number): number[] {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = nums.length - 1; j > i; j--) {
-      if (nums[i] + nums[j] === target) return [i, j];
+// export function twoSum(nums: number[], target: number): number[] {
+//   for (let i = 0; i < nums.length; i++) {
+//     for (let j = nums.length - 1; j > i; j--) {
+//       if (nums[i] + nums[j] === target) return [i, j];
+//     }
+//   }
+//   return [];
+// }
+
+// optimized approach
+
+export function twoSum(num: number[], target: number) {
+  const map = new Map<number, number>();
+
+  for (let i = 0; i < num.length; i++) {
+    const complement = target - num[i];
+    if (map.has(complement)) {
+      return [map.get(complement), i];
+    } else {
+      map.set(num[i], i);
     }
   }
   return [];

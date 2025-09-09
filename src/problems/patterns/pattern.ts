@@ -7,22 +7,22 @@
 // * * * * * *
 
 //S1.
-export function pattern1(num: number): string {
-  let str = "";
-  for (let i = 0; i <= num; i++) {
-    for (let j = 0; j <= num; j++) {
-      str += "* ";
-    }
-    str += "\n";
-  }
-  console.log(str);
-  return str;
-}
+// export function pattern1(num: number): string {
+//   let str = "";
+//   for (let i = 0; i <= num; i++) {
+//     for (let j = 0; j <= num; j++) {
+//       str += "* ";
+//     }
+//     str += "\n";
+//   }
+//   console.log(str);
+//   return str;
+// }
 
 //S2.
-export function pattern1s2(num: number) {
-  console.log(Array(num).fill("* ".repeat(5)).join("\n"));
-}
+// export function pattern1s2(num: number) {
+//   console.log(Array(num).fill("* ".repeat(5)).join("\n"));
+// }
 
 // Q2.
 // 1
@@ -32,18 +32,18 @@ export function pattern1s2(num: number) {
 // 5 5 5 5 5
 // 6 6 6 6 6 6
 
-export function pattern2(num: number) {
-  let str = "";
-  for (let i = 0; i <= num; i++) {
-    for (let j = 0; j <= i; j++) {
-      str += i + 1 + " ";
-    }
-    str += "\n";
-  }
-  console.log(str);
-}
+// export function pattern2(num: number) {
+//   let str = "";
+//   for (let i = 0; i <= num; i++) {
+//     for (let j = 0; j <= i; j++) {
+//       str += i + 1 + " ";
+//     }
+//     str += "\n";
+//   }
+//   console.log(str);
+// }
 
-// // 3.
+//  Q3.
 //      *
 //     ***
 //    *****
@@ -51,35 +51,35 @@ export function pattern2(num: number) {
 //  *********
 // ***********
 
-export function patternPyramid(num: number) {
-  let str: string = "";
+// export function patternPyramid(num: number) {
+//   let str: string = "";
 
-  const printSpace = (num: number) => {
-    for (let k = num; k > 0; k--) {
-      str += " ";
-    }
-  };
-  for (let i = 1; i <= num; i++) {
-    printSpace(num - i);
-    for (let j = 1; j <= i * 2 - 1; j++) {
-      str += "*";
-    }
-    str += "\n";
-  }
-  console.log(str);
-}
+//   const printSpace = (num: number) => {
+//     for (let k = num; k > 0; k--) {
+//       str += " ";
+//     }
+//   };
+//   for (let i = 1; i <= num; i++) {
+//     printSpace(num - i);
+//     for (let j = 1; j <= i * 2 - 1; j++) {
+//       str += "*";
+//     }
+//     str += "\n";
+//   }
+//   console.log(str);
+// }
 
-export function patternPyramidS2(num: number) {
-  let result = "";
-  for (let i = 1; i <= num; i++) {
-    const spaces = " ".repeat(num - i);
-    const star = "*".repeat(i * 2 - 1);
-    result += spaces + star + "\n";
-  }
-  console.log(result);
-}
+// export function patternPyramidS2(num: number) {
+//   let result = "";
+//   for (let i = 1; i <= num; i++) {
+//     const spaces = " ".repeat(num - i);
+//     const star = "*".repeat(i * 2 - 1);
+//     result += spaces + star + "\n";
+//   }
+//   console.log(result);
+// }
 
-// S3.
+// Q4.
 // 1
 // 01
 // 101
@@ -87,8 +87,68 @@ export function patternPyramidS2(num: number) {
 // 10101
 // 010101
 
-export function pattern3(num: number) {
-  let result = "";
-  for (let i = 0; i < num; i++) { }
-  console.log(result);
+// export function printPattern() {
+//   let pattern = "";
+//   let arr = [];
+//   let toggle = 1;
+//   for (let i = 1; i <= 6; i++) {
+//     for (let j = i; j <= i; j++) {
+//       arr.unshift(toggle);
+//       toggle == 1 ? (toggle = 0) : (toggle = 1);
+//     }
+//     pattern += arr.join("");
+//     pattern += "\n";
+//   }
+//   console.log(pattern);
+//   console.log(arr);
+// }
+
+// export function binaryPattern(num: number): string {
+//   let str = "";
+//   // let toggel = 1;
+//   for (let i = 1; i <= num; i++) {
+//     for (let j = i; j <= i; j++) {
+//       if (i % 2 == 0) {
+//         let temp = 0 + str;
+//         str += temp;
+//       } else {
+//         let temp = 1 + str;
+//         str += temp;
+//       }
+//     }
+//     str += "\n";
+//   }
+//   console.log(str);
+//   return str;
+// }
+
+// Q5 Number Crown Pattern
+
+// 1          1
+// 12        21
+// 123      321
+// 1234    4321
+// 12345  54321
+// 123456654321
+
+export function numberCrownPatter(n: number) {
+  let str = "";
+  let count = 1;
+  while (count <= n) {
+    for (let i = 1; i <= count; i++) {
+      str += i;
+    }
+
+    for (let j = 1; j <= n * 2 - count * 2; j++) {
+      str += " ";
+    }
+
+    for (let k = count; k >= 1; k--) {
+      str += k;
+    }
+
+    str += "\n";
+    count++;
+  }
+  console.log(str);
 }
