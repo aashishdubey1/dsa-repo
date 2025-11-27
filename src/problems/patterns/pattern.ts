@@ -131,24 +131,68 @@
 // 12345  54321
 // 123456654321
 
-export function numberCrownPatter(n: number) {
-  let str = "";
-  let count = 1;
-  while (count <= n) {
-    for (let i = 1; i <= count; i++) {
-      str += i;
-    }
+// export function numberCrownPatter(n: number) {
+//   let str = "";
+//   let count = 1;
+//   while (count <= n) {
+//     for (let i = 1; i <= count; i++) {
+//       str += i;
+//     }
 
-    for (let j = 1; j <= n * 2 - count * 2; j++) {
+//     for (let j = 1; j <= n * 2 - count * 2; j++) {
+//       str += " ";
+//     }
+
+//     for (let k = count; k >= 1; k--) {
+//       str += k;
+//     }
+
+//     str += "\n";
+//     count++;
+//   }
+//   console.log(str);
+// }
+
+// Increasing Number Triangle Pattern
+// 1
+// 2  3
+// 4  5  6
+// 7  8  9  10
+// 11  12  13  14  15
+// 16  17  18  19  20  21
+
+// export function increaseNumberTriangle(num: number) {
+//   let str = "";
+//   let counter = 1;
+//   for (let i = 1; i <= num; i++) {
+//     for (let j = 1; j <= i; j++) {
+//       str += counter;
+//       str += " ";
+//       counter++;
+//     }
+//     str += "\n";
+//   }
+//   console.log(str);
+// }
+
+// Increasing Letter Triangle Pattern
+// A
+// A B
+// A B C
+// A B C D
+// A B C D E
+// A B C D E F
+
+export function increaseLetterTriangle(num: number) {
+  let str = "";
+  let charCode = 65;
+  for (let i = 1; i <= num; i++) {
+    for (let j = 1; j <= i; j++) {
+      str += String.fromCharCode(charCode);
       str += " ";
     }
-
-    for (let k = count; k >= 1; k--) {
-      str += k;
-    }
-
+    charCode++;
     str += "\n";
-    count++;
   }
   console.log(str);
 }

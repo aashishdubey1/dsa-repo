@@ -26,7 +26,17 @@ export const sumOfNNumbers2 = (n: number): any => {
   return n + sumOfNNumbers2(n - 1);
 };
 
-export const factorial = (n: number): any => {
-  if (n < 1) return;
-  return n * factorial(n - 1);
+export const factorial = (count: number, n: number): any => {
+  if (n < 1) return count;
+  return factorial(count * n, n - 1);
+};
+
+export const reverseArray = (
+  arrRes: number[],
+  arr: number[],
+  count: number
+): any => {
+  if (count == 0) return arrRes;
+  arrRes.push(arr[count - 1]);
+  return reverseArray(arrRes, arr, count - 1);
 };
