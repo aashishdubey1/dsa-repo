@@ -7,7 +7,7 @@ import {
   sumOfNNumbers2,
   reverseArray,
 } from "./problems/recursion/basics.";
-import { selectionShort } from "./problems/sorting/selectionShort";
+import { selectionShort } from "./problems/sorting/selectionSort";
 
 // printNameNTimes(5, "Aashish");
 
